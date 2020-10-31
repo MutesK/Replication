@@ -16,18 +16,17 @@ namespace Replication
 		SubscribeParameters			_Parameters;
 		ReplicationImplPtr			_ReplicatorPtr;
 	public:
-		PublishProperty(const ReplicationImplPtr& Replicator, const ReplicationParameters& Parameters)
-			:_Parameters(Parameters), _type(), _ReplicatorPtr(Replicator)
+        SubscribeProperty(const ReplicationImplPtr& Replicator, const ReplicationParameters& Parameters)
+			:_Parameters(Parameters), _ReplicatorPtr(Replicator)
 		{
+            this->_type = Type();
 			_Parameters.UpdateCallback = [&](const std::string& Value)
 			{
 				OnUpdateValue(Value);
-			}
-			_Parameters.Value = "";
-
+			};
 			_ReplicatorPtr->UnRegisterSubscribe(_Parameters);
 		}
-		~PublishProperty()
+		~SubscribeProperty()
 		{
 			_ReplicatorPtr->UnRegisterSubscribe(_Parameters);
 		}
@@ -42,19 +41,19 @@ namespace Replication
 
 		void OnUpdateValue(const std::string& Value)
 		{
-			if constexpr (is_string<Type>)
+			if constexpr (is_string<Type>::requires)
 			{
 				this->_type = Value;
 			}
-			else if (is_integer<Type>)
+			else if (is_integer<Type>::requires)
 			{
 				this->_type = std::atoi(Value.c_str());
 			}
-			else if (is_float<Type>)
+			else if (is_float<Type>::requires)
 			{
 				this->_type = std::stof(Value.c_str());
 			}
-			else if (is_double<Type>)
+			else if (is_double<Type>::requires)
 			{
 				this->_type = std::stod(Value.c_str());
 			}

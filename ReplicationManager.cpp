@@ -14,6 +14,8 @@ namespace Replication
 			const ConnectEnviorment& Env)
 		{
 
+		    std::logic_error("");
+            return nullptr;
 		}
 	};
 

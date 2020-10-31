@@ -18,14 +18,15 @@ namespace Replication
 		ReplicationImplPtr			_ReplicatorPtr;
 	public:
 		PublishProperty(const ReplicationImplPtr& Replicator, const ReplicationParameters& Parameters)
-			:_Parameters(Parameters), _type(), _ReplicatorPtr(Replicator)
+			:_Parameters(Parameters), _ReplicatorPtr(Replicator)
 		{
+		    this->_type = Type();
 			_Parameters.Value = "";
 		}
 	protected:
 		virtual void OnChangedProperty() override
 		{
-			_Parameters.Value = std::to_string(_type);
+			_Parameters.Value = std::to_string(this->_type);
 
 			_ReplicatorPtr->NotifyPublish(_Parameters);
 		}

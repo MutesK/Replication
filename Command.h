@@ -11,6 +11,6 @@ namespace Replication
 	public:
 		Command(const ConnectionPtr& Ptr);
 
-		virtual void Do() = 0;
+		virtual ErrorCode Do() = 0;
 	};
 }
