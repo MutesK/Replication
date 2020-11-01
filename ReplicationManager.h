@@ -29,6 +29,8 @@ namespace Replication
 
 		template <typename Type>
 		SubscribeProperty<Type> IssuedSubscribe(const ReplicationParameters& Parameters);
+
+		void Resume();
 	};
 	template<typename Type>
 	inline PublishProperty<Type> ReplicationManager::IssuedPublish(const ReplicationParameters& Parameters)
@@ -36,7 +38,8 @@ namespace Replication
 		if (_Mode != ReplicationMode::EMaster)
 			std::logic_error("");
 
-		return PublishProperty<Type>(_ReplicationImplPtr, Parameters);
+		const auto Property = PublishProperty<Type>(_ReplicationImplPtr, Parameters);
+        return Property;
 	}
 	template<typename Type>
 	inline SubscribeProperty<Type> ReplicationManager::IssuedSubscribe(const ReplicationParameters& Parameters)
@@ -44,6 +47,18 @@ namespace Replication
 		if (_Mode == ReplicationMode::EMaster)
 			std::logic_error("");
 
-		return SubscribeProperty<Type>(_ReplicationImplPtr, Parameters);
+        const auto Property =  SubscribeProperty<Type>(_ReplicationImplPtr, Parameters);
+        _ReplicationImplPtr->RegisterSubscribe(Property);
+
+        return Property;
 	}
+
+    void ReplicationManager::Resume()
+    {
+        if(nullptr == _ReplicationImplPtr)
+            return;
+
+        _ReplicationImplPtr->Resume();
+    }
+
 }

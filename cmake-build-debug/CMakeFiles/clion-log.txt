@@ -6,7 +6,6 @@
 -- Found libevent component: /usr/local/lib/libevent_pthreads.dylib
 -- Found libevent 2.1.12 in /usr/local
 -- hiredis location : /usr/local/include
--- libevent location : 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/junminkim/Workspace/C++/Replication/cmake-build-debug

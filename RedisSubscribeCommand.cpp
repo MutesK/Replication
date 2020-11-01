@@ -48,7 +48,7 @@ namespace Replication
 
                 std::for_each(ParameterMap.begin(), ParameterMap.end(), [&Command](const auto& Iter)
                 {
-                    Command.append(Util::Format(" %s ", Iter.second.Channel));
+                    Command.append(Util::Format(" %s ", Iter.second.Channel.c_str()));
                 });
 
                 return Command;
@@ -82,6 +82,11 @@ namespace Replication
                 }
             }
 
+        }
+
+        std::size_t RedisSubscribeCommand::ParameterSize() const
+        {
+            return _ParameterMap.size();
         }
     }
 }

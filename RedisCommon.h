@@ -9,7 +9,6 @@
 
 #if defined(REPLICATION_REDIS)
 
-
 #include <hiredis/hiredis.h>
 #include <hiredis/async.h>
 #include <hiredis/adapters/libevent.h>
@@ -22,17 +21,23 @@ namespace Replication
         {
             static void Throw(redisContext *pContext, std::string function, size_t Line)
             {
+#if defined(REPLICATION_DEBUG)
 
+#endif
             }
 
             static void Throw(redisAsyncContext *pContext, std::string function, size_t Line)
             {
+#if defined(REPLICATION_DEBUG)
 
+#endif
             }
 
             static void Throw(std::string ThrowMessage, std::string Function, std::size_t line)
             {
+#if defined(REPLICATION_DEBUG)
 
+#endif
             }
         };
 
@@ -61,6 +66,7 @@ namespace Replication
                 return _pRawReply;
             }
         };
+
     }
 }
 

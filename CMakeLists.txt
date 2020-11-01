@@ -30,7 +30,7 @@ add_executable(Replication
         SharedPool.h
         SubscribeProperty.h
         TypeDefine.h
-        TypeTraits.h RedisConnection.cpp RedisConnection.hpp RedisCommon.h RedisAuthCommand.cpp RedisAuthCommand.hpp RedisPublishCommand.cpp RedisPublishCommand.hpp RedisSubscribeCommand.cpp RedisSubscribeCommand.hpp)
+        TypeTraits.h RedisConnection.cpp RedisConnection.hpp RedisCommon.h RedisAuthCommand.cpp RedisAuthCommand.hpp RedisPublishCommand.cpp RedisPublishCommand.hpp RedisSubscribeCommand.cpp RedisSubscribeCommand.hpp RedisReplicationImpl.cpp RedisReplicationImpl.hpp)
 
 
 target_link_libraries(Replication ${HIREDIS_LIBRARIES})

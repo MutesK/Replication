@@ -26,20 +26,21 @@ namespace Replication
 	{
 		for (size_t Count = 0; Count < Env._ConnectionSize; ++Count)
 		{
+		    ErrorCode Code;
 			auto Connection = std::make_shared<DerivedConnectionType>(Env);
 
-			if (Connection->Connect())
+			if (Connection->Connect(Code))
 			{
 				--Count;
 				continue;
 			}
 
-			_SharedPool->Add(std::move(Connection));
+			_SharedPool.Add(std::move(Connection));
 		}
 	}
 	template<class DerivedConnectionType>
 	inline std::shared_ptr<DerivedConnectionType> ConnectionPool<DerivedConnectionType>::Acquire()
 	{
-		return _SharedPool->Acquire();
+		return _SharedPool.Acquire();
 	}
 }

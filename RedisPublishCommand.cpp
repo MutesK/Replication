@@ -25,7 +25,7 @@ namespace Replication
 
                 std::for_each(ParameterMap.begin(), ParameterMap.end(), [&Command](const auto& Iter)
                 {
-                    Command.append(Util::Format(" %s %s ", Iter.second.Channel, Iter.second.Value));
+                    Command.append(Util::Format(" %s %s ", Iter.second.Channel.c_str(), Iter.second.Value.c_str()));
                 });
 
                 return Command;
@@ -68,6 +68,16 @@ namespace Replication
             }
 
             _ParameterMap.erase(Iter);
+        }
+
+        void RedisPublishCommand::ResetParameter()
+        {
+            _ParameterMap.clear();
+        }
+
+        std::size_t RedisPublishCommand::ParameterSize() const
+        {
+            return _ParameterMap.size();
         }
     }
 

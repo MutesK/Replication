@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/junminkim/Workspace/C++/Replication/RedisAuthCommand.cpp" "/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles/Replication.dir/RedisAuthCommand.cpp.o"
   "/Users/junminkim/Workspace/C++/Replication/RedisConnection.cpp" "/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles/Replication.dir/RedisConnection.cpp.o"
   "/Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.cpp" "/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o"
+  "/Users/junminkim/Workspace/C++/Replication/RedisReplicationImpl.cpp" "/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.o"
   "/Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.cpp" "/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o"
   "/Users/junminkim/Workspace/C++/Replication/ReplicationManager.cpp" "/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles/Replication.dir/ReplicationManager.cpp.o"
   )
@@ -16,8 +17,8 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../."
   "/usr/local/include"
+  "../."
   )
 
 # Targets to which this target links.

@@ -2,7 +2,24 @@
 
 #include <atomic>
 #include <thread>
+
+
+#if defined(WIN32) || defined(WIN64)
 #include <Windows.h>
+#else
+#include <pthread.h>
+#include <signal.h>
+
+void SuspendThread(void* native_handle)
+{
+    pthread_kill((pthread_t)native_handle, SIGUSR1);
+}
+
+void ResumeThread(void* native_handle)
+{
+    pthread_kill((pthread_t)native_handle, SIGUSR2);
+}
+#endif
 
 class Runnable
 {

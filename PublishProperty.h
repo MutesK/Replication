@@ -23,12 +23,16 @@ namespace Replication
 		    this->_type = Type();
 			_Parameters.Value = "";
 		}
+		virtual ~PublishProperty()
+        {
+		    _ReplicatorPtr->UnRequestPublishOnce(_Parameters);
+        }
 	protected:
 		virtual void OnChangedProperty() override
 		{
 			_Parameters.Value = std::to_string(this->_type);
 
-			_ReplicatorPtr->NotifyPublish(_Parameters);
+			_ReplicatorPtr->RequestPublishOnce(_Parameters);
 		}
 	};
 

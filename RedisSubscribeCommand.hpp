@@ -22,6 +22,7 @@ namespace Replication
 
             void PushParameter(const SubscribeParameters& Parameter);
             void EraseParameter(const std::string& ChannelName);
+            std::size_t ParameterSize() const;
 
             // As-like Consume
             virtual bool Do(ErrorCode &Code) override;

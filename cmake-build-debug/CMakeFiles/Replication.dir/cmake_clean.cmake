@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Replication.dir/RedisAuthCommand.cpp.o"
   "CMakeFiles/Replication.dir/RedisConnection.cpp.o"
   "CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o"
+  "CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.o"
   "CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o"
   "CMakeFiles/Replication.dir/ReplicationManager.cpp.o"
   "Replication"

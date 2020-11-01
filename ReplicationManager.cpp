@@ -4,6 +4,9 @@
 #include "ReplicationManager.h"
 #include "ReplicationImpl.h"
 
+#include "ConnectionPool.h"
+#include "RedisConnection.hpp"
+#include "RedisReplicationImpl.hpp"
 
 namespace Replication
 {
@@ -13,6 +16,18 @@ namespace Replication
 		static std::shared_ptr<IReplicationImpl> CreateReplicationMethod(ReplicationMode ModeType,
 			const ConnectEnviorment& Env)
 		{
+#if defined(REPLICATION_REDIS)
+            auto Ptr = std::shared_ptr<ConnectionPool<::Replication::Redis::RedisConnection>>
+            (new ConnectionPool<::Replication::Redis::RedisConnection>(Env));
+
+            switch(ModeType)
+            {
+                case ReplicationMode::EMaster:
+                    return std::make_shared<Redis::RedisPublishReplicationImpl>(Ptr);
+                case ReplicationMode::ESlave:
+                    return std::make_shared<Redis::RedisSubscribeReplicationImpl>(Ptr);
+#endif
+            }
 
 		    std::logic_error("");
             return nullptr;

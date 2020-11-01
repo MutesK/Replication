@@ -44,8 +44,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/junminkim/Workspace/C++/Replication/."/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/junminkim/Workspace/C++/Replication/."/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -66,8 +66,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/junminkim/Workspace/C++/Replication/."/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/junminkim/Workspace/C++/Replication/."/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -131,6 +131,12 @@
 			<Option target="Replication"/>
 		</Unit>
 		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.hpp">
+			<Option target="Replication"/>
+		</Unit>
+		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisReplicationImpl.cpp">
+			<Option target="Replication"/>
+		</Unit>
+		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisReplicationImpl.hpp">
 			<Option target="Replication"/>
 		</Unit>
 		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.cpp">

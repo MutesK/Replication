@@ -9,6 +9,7 @@
 
 #ifdef REPLICATION_REDIS
 
+struct redisContext;
 
 namespace Replication
 {

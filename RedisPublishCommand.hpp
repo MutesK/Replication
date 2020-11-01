@@ -19,10 +19,11 @@ namespace Replication
         public:
             RedisPublishCommand(const ConnectionPtr& Ptr);
 
+            std::size_t ParameterSize() const;
             void PushParameter(const PublishParameters& Parameter);
             void EraseParameter(const std::string& ChannelName);
+            void ResetParameter();
 
-            // As-like Consume
             virtual bool Do(ErrorCode &Code) override;
         };
     }

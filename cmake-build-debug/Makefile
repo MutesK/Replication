@@ -258,6 +258,33 @@ RedisPublishCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisPublishCommand.cpp.s
 .PHONY : RedisPublishCommand.cpp.s
 
+RedisReplicationImpl.o: RedisReplicationImpl.cpp.o
+
+.PHONY : RedisReplicationImpl.o
+
+# target to build an object file
+RedisReplicationImpl.cpp.o:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.o
+.PHONY : RedisReplicationImpl.cpp.o
+
+RedisReplicationImpl.i: RedisReplicationImpl.cpp.i
+
+.PHONY : RedisReplicationImpl.i
+
+# target to preprocess a source file
+RedisReplicationImpl.cpp.i:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.i
+.PHONY : RedisReplicationImpl.cpp.i
+
+RedisReplicationImpl.s: RedisReplicationImpl.cpp.s
+
+.PHONY : RedisReplicationImpl.s
+
+# target to generate assembly for a file
+RedisReplicationImpl.cpp.s:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.s
+.PHONY : RedisReplicationImpl.cpp.s
+
 RedisSubscribeCommand.o: RedisSubscribeCommand.cpp.o
 
 .PHONY : RedisSubscribeCommand.o
@@ -336,6 +363,9 @@ help:
 	@echo "... RedisPublishCommand.o"
 	@echo "... RedisPublishCommand.i"
 	@echo "... RedisPublishCommand.s"
+	@echo "... RedisReplicationImpl.o"
+	@echo "... RedisReplicationImpl.i"
+	@echo "... RedisReplicationImpl.s"
 	@echo "... RedisSubscribeCommand.o"
 	@echo "... RedisSubscribeCommand.i"
 	@echo "... RedisSubscribeCommand.s"
