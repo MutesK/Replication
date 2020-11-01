@@ -7,6 +7,8 @@
 
 #include "Command.h"
 
+#ifdef REPLICATION_REDIS
+
 namespace Replication
 {
     namespace Redis
@@ -17,10 +19,11 @@ namespace Replication
         public:
             RedisAuthCommand(const ConnectionPtr& Ptr, const std::string& Pass);
 
-            virtual ErrorCode Do() override;
+            virtual bool Do(ErrorCode& Code) override;
         };
     }
 }
+#endif
 
 
 #endif //REPLICATION_REDISAUTHCOMMAND_HPP

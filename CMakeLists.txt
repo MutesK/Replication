@@ -7,11 +7,9 @@ find_package(hiredis REQUIRED)
 find_package(libevent REQUIRED)
 
 include_directories(${hiredis_INCLUDE_DIRS})
-include_directories(${libevent_INCLUDE_DIRS})
 include_directories(.)
 
 message(STATUS "hiredis location : ${hiredis_INCLUDE_DIRS}")
-message(STATUS "libevent location : ${libevent_INCLUDE_DIRS}")
 
 
 add_executable(Replication
@@ -32,8 +30,7 @@ add_executable(Replication
         SharedPool.h
         SubscribeProperty.h
         TypeDefine.h
-        TypeTraits.h RedisConnection.cpp RedisConnection.hpp RedisCommon.h RedisAuthCommand.cpp RedisAuthCommand.hpp)
+        TypeTraits.h RedisConnection.cpp RedisConnection.hpp RedisCommon.h RedisAuthCommand.cpp RedisAuthCommand.hpp RedisPublishCommand.cpp RedisPublishCommand.hpp RedisSubscribeCommand.cpp RedisSubscribeCommand.hpp)
 
 
 target_link_libraries(Replication ${HIREDIS_LIBRARIES})
-target_link_libraries(Replication ${LIBEVENT_LIBRARIES})

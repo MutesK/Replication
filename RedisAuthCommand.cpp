@@ -2,10 +2,13 @@
 // Created by JunMin Kim on 2020/10/31.
 //
 
+
 #include "RedisCommon.h"
 #include "RedisConnection.hpp"
 #include "RedisAuthCommand.hpp"
 
+
+#ifdef REPLICATION_REDIS
 
 namespace Replication
 {
@@ -17,13 +20,35 @@ namespace Replication
         {
         }
 
-        ErrorCode RedisAuthCommand::Do()
+        bool RedisAuthCommand::Do(ErrorCode& Code)
         {
             const auto& Ptr = std::static_pointer_cast<RedisConnection>(_ConnectionPtr);
-            const auto Context = Ptr->GetRedisContext();
+            if(nullptr == Ptr)
+            {
+                RedisError::Throw("Connection Pointer is Null", __FUNCTION__, __LINE__);
+                return false;
+            }
 
-            auto Reply = redisCommand(Context, "AUTH %s", _Pass.c_str());
+            auto Context = Ptr->GetRedisContext();
+            if(nullptr == Context)
+            {
+                RedisError::Throw("RedisContext Pointer is Null Get From Connection", __FUNCTION__, __LINE__);
+                return false;
+            }
 
+            ScopedRedisReply Reply = (redisReply *)redisCommand(Context, "AUTH %s", _Pass.c_str());
+            if(nullptr == Reply.get())
+            {
+                RedisError::Throw("RedisReply is Null From redisCommand", __FUNCTION__, __LINE__);
+                return false;
+            }
+
+#if defined(REPLICATION_DEBUG)
+            std::cout << Util::Format("AUTH %s", Reply->str) << '\n';
+#endif
+            return true;
         }
     }
 }
+
+#endif

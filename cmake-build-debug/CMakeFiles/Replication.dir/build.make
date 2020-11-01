@@ -122,13 +122,41 @@ CMakeFiles/Replication.dir/RedisAuthCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Replication.dir/RedisAuthCommand.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/junminkim/Workspace/C++/Replication/RedisAuthCommand.cpp -o CMakeFiles/Replication.dir/RedisAuthCommand.cpp.s
 
+CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o: CMakeFiles/Replication.dir/flags.make
+CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o: ../RedisPublishCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o -c /Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.cpp
+
+CMakeFiles/Replication.dir/RedisPublishCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Replication.dir/RedisPublishCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.cpp > CMakeFiles/Replication.dir/RedisPublishCommand.cpp.i
+
+CMakeFiles/Replication.dir/RedisPublishCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Replication.dir/RedisPublishCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.cpp -o CMakeFiles/Replication.dir/RedisPublishCommand.cpp.s
+
+CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o: CMakeFiles/Replication.dir/flags.make
+CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o: ../RedisSubscribeCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o -c /Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.cpp
+
+CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.cpp > CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.i
+
+CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.cpp -o CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.s
+
 # Object files for target Replication
 Replication_OBJECTS = \
 "CMakeFiles/Replication.dir/Command.cpp.o" \
 "CMakeFiles/Replication.dir/Connection.cpp.o" \
 "CMakeFiles/Replication.dir/ReplicationManager.cpp.o" \
 "CMakeFiles/Replication.dir/RedisConnection.cpp.o" \
-"CMakeFiles/Replication.dir/RedisAuthCommand.cpp.o"
+"CMakeFiles/Replication.dir/RedisAuthCommand.cpp.o" \
+"CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o" \
+"CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o"
 
 # External object files for target Replication
 Replication_EXTERNAL_OBJECTS =
@@ -138,6 +166,8 @@ Replication: CMakeFiles/Replication.dir/Connection.cpp.o
 Replication: CMakeFiles/Replication.dir/ReplicationManager.cpp.o
 Replication: CMakeFiles/Replication.dir/RedisConnection.cpp.o
 Replication: CMakeFiles/Replication.dir/RedisAuthCommand.cpp.o
+Replication: CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o
+Replication: CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o
 Replication: CMakeFiles/Replication.dir/build.make
 Replication: /usr/local/lib/libevent_extra-2.1.7.dylib
 Replication: /usr/local/lib/libevent_openssl-2.1.7.dylib
@@ -146,7 +176,7 @@ Replication: /usr/local/lib/libssl.dylib
 Replication: /usr/local/lib/libcrypto.dylib
 Replication: /usr/local/lib/libevent_core-2.1.7.dylib
 Replication: CMakeFiles/Replication.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Replication"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Replication"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Replication.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

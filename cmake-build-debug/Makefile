@@ -231,6 +231,60 @@ RedisConnection.cpp.s:
 	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisConnection.cpp.s
 .PHONY : RedisConnection.cpp.s
 
+RedisPublishCommand.o: RedisPublishCommand.cpp.o
+
+.PHONY : RedisPublishCommand.o
+
+# target to build an object file
+RedisPublishCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o
+.PHONY : RedisPublishCommand.cpp.o
+
+RedisPublishCommand.i: RedisPublishCommand.cpp.i
+
+.PHONY : RedisPublishCommand.i
+
+# target to preprocess a source file
+RedisPublishCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisPublishCommand.cpp.i
+.PHONY : RedisPublishCommand.cpp.i
+
+RedisPublishCommand.s: RedisPublishCommand.cpp.s
+
+.PHONY : RedisPublishCommand.s
+
+# target to generate assembly for a file
+RedisPublishCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisPublishCommand.cpp.s
+.PHONY : RedisPublishCommand.cpp.s
+
+RedisSubscribeCommand.o: RedisSubscribeCommand.cpp.o
+
+.PHONY : RedisSubscribeCommand.o
+
+# target to build an object file
+RedisSubscribeCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o
+.PHONY : RedisSubscribeCommand.cpp.o
+
+RedisSubscribeCommand.i: RedisSubscribeCommand.cpp.i
+
+.PHONY : RedisSubscribeCommand.i
+
+# target to preprocess a source file
+RedisSubscribeCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.i
+.PHONY : RedisSubscribeCommand.cpp.i
+
+RedisSubscribeCommand.s: RedisSubscribeCommand.cpp.s
+
+.PHONY : RedisSubscribeCommand.s
+
+# target to generate assembly for a file
+RedisSubscribeCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Replication.dir/build.make CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.s
+.PHONY : RedisSubscribeCommand.cpp.s
+
 ReplicationManager.o: ReplicationManager.cpp.o
 
 .PHONY : ReplicationManager.o
@@ -279,6 +333,12 @@ help:
 	@echo "... RedisConnection.o"
 	@echo "... RedisConnection.i"
 	@echo "... RedisConnection.s"
+	@echo "... RedisPublishCommand.o"
+	@echo "... RedisPublishCommand.i"
+	@echo "... RedisPublishCommand.s"
+	@echo "... RedisSubscribeCommand.o"
+	@echo "... RedisSubscribeCommand.i"
+	@echo "... RedisSubscribeCommand.s"
 	@echo "... ReplicationManager.o"
 	@echo "... ReplicationManager.i"
 	@echo "... ReplicationManager.s"

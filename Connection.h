@@ -13,7 +13,7 @@ namespace Replication
 		Connection(const ConnectEnviorment& Env);
 		virtual ~Connection();
 
-		virtual ErrorCode Connect() = 0;
+		virtual bool Connect(ErrorCode& Code) = 0;
 		virtual bool Disconnect() = 0;
 	};
 

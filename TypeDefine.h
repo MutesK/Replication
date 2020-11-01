@@ -8,6 +8,12 @@ namespace Replication
 	struct ReplicationParameters
 	{
 		std::string  Channel;
+
+        ReplicationParameters() = default;
+        ReplicationParameters(const ReplicationParameters& paramters)
+        {
+		    Channel = paramters.Channel;
+        }
 	};
 
 	struct PublishParameters : public ReplicationParameters
@@ -15,24 +21,29 @@ namespace Replication
 		std::string  Value;
 
         PublishParameters() = default;
-		PublishParameters(const ReplicationParameters& paranters)
+		PublishParameters(const ReplicationParameters& parameters)
+		:ReplicationParameters(parameters)
         {
-		    Channel = paranters.Channel;
         }
 	};
+	using ChannelPerPublishParameterMap = std::unordered_map<std::string, PublishParameters>;
+
 
 	struct SubscribeParameters : public ReplicationParameters
 	{
 		std::function<void(const std::string& value)> UpdateCallback;
 
         SubscribeParameters() = default;
-        SubscribeParameters(const ReplicationParameters& paranters)
+        SubscribeParameters(const ReplicationParameters& parameters)
+        :ReplicationParameters(parameters)
         {
-            Channel = paranters.Channel;
         }
 	};
+    using ChannelPerSubscribeParameterMap = std::unordered_map<std::string, SubscribeParameters>;
 
-	enum class ReplicationMode
+
+
+    enum class ReplicationMode
 	{
 		EMaster = 0,
 		ESlave,

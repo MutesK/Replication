@@ -5,6 +5,10 @@
 
 #include "RedisCommon.h"
 #include "RedisConnection.hpp"
+#include "RedisAuthCommand.hpp"
+
+#ifdef REPLICATION_REDIS
+
 
 namespace Replication
 {
@@ -13,7 +17,6 @@ namespace Replication
         RedisConnection::RedisConnection(const ConnectEnviorment &Env)
                 : Connection(Env)
         {
-
         }
 
         RedisConnection::~RedisConnection()
@@ -21,25 +24,32 @@ namespace Replication
             Disconnect();
         }
 
-        ErrorCode RedisConnection::Connect()
+        bool RedisConnection::Connect(ErrorCode& Code)
         {
             _pRawContext = redisConnect(_Enviorment._Ip.c_str(), _Enviorment._Port);
             if(_pRawContext == nullptr)
             {
-                return -1;
+                return false;
             }
             else if(_pRawContext->err)
             {
                 redisFree(_pRawContext);
-                return _pRawContext->err;
+                Code = _pRawContext->err;
+
+                RedisError::Throw(_pRawContext, __FUNCTION__, __LINE__);
+                return false;
             }
 
             if(_Enviorment._Password.length() > 0)
             {
-                // AUTH
+                RedisAuthCommand Command(shared_from_this(), _Enviorment._Password);
+                if(!Command.Do(Code))
+                {
+                    return false;
+                }
             }
 
-            return 0;
+            return true;
         }
 
         bool RedisConnection::Disconnect()
@@ -54,3 +64,5 @@ namespace Replication
         }
     }
 }
+
+#endif

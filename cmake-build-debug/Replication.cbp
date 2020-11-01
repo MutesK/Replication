@@ -127,6 +127,18 @@
 		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisConnection.hpp">
 			<Option target="Replication"/>
 		</Unit>
+		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.cpp">
+			<Option target="Replication"/>
+		</Unit>
+		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.hpp">
+			<Option target="Replication"/>
+		</Unit>
+		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.cpp">
+			<Option target="Replication"/>
+		</Unit>
+		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.hpp">
+			<Option target="Replication"/>
+		</Unit>
 		<Unit filename="/Users/junminkim/Workspace/C++/Replication/ReplicationImpl.h">
 			<Option target="Replication"/>
 		</Unit>
