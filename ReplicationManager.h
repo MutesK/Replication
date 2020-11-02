@@ -1,11 +1,11 @@
 #pragma once
 
+#include "ConnectEnviorment.h"
 #include "PublishProperty.h"
 #include "SubscribeProperty.h"
 
 namespace Replication
 {
-	struct ConnectEnviorment;
 	struct PublishParameters;
 	struct SubscribeParameters;
 
@@ -30,13 +30,13 @@ namespace Replication
 		template <typename Type>
 		SubscribeProperty<Type> IssuedSubscribe(const ReplicationParameters& Parameters);
 
-		void Resume();
+		void Comsume();
 	};
 	template<typename Type>
 	inline PublishProperty<Type> ReplicationManager::IssuedPublish(const ReplicationParameters& Parameters)
 	{
 		if (_Mode != ReplicationMode::EMaster)
-			std::logic_error("");
+			std::logic_error("Slave Mode can't called IssuedPublish");
 
 		const auto Property = PublishProperty<Type>(_ReplicationImplPtr, Parameters);
         return Property;
@@ -45,7 +45,7 @@ namespace Replication
 	inline SubscribeProperty<Type> ReplicationManager::IssuedSubscribe(const ReplicationParameters& Parameters)
 	{
 		if (_Mode == ReplicationMode::EMaster)
-			std::logic_error("");
+            std::logic_error("Master Mode can't called IssuedSubscribe");
 
         const auto Property =  SubscribeProperty<Type>(_ReplicationImplPtr, Parameters);
         _ReplicationImplPtr->RegisterSubscribe(Property);
@@ -53,12 +53,12 @@ namespace Replication
         return Property;
 	}
 
-    void ReplicationManager::Resume()
+    void ReplicationManager::Comsume()
     {
         if(nullptr == _ReplicationImplPtr)
             return;
 
-        _ReplicationImplPtr->Resume();
+        _ReplicationImplPtr->Comsume();
     }
 
 }

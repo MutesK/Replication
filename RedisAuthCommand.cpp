@@ -44,7 +44,7 @@ namespace Replication
             }
 
 #if defined(REPLICATION_DEBUG)
-            std::cout << Util::Format("AUTH %s", Reply->str) << '\n';
+            std::cout << Util::StringHelper::Format("AUTH %s", Reply->str) << '\n';
 #endif
             return true;
         }

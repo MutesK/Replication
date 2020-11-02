@@ -40,7 +40,7 @@ namespace Replication
             // Not to Run
         }
 
-        void RedisPublishReplicationImpl::Resume()
+        void RedisPublishReplicationImpl::Comsume()
         {
             if(_CommandPtr->ParameterSize() <= 0)
             {
@@ -86,7 +86,7 @@ namespace Replication
             _CommandPtr->EraseParameter(Parameters.Channel);
         }
 
-        void RedisSubscribeReplicationImpl::Resume()
+        void RedisSubscribeReplicationImpl::Comsume()
         {
             if(_CommandPtr->ParameterSize() <= 0)
             {

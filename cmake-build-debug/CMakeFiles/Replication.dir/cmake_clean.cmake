@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.o"
   "CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o"
   "CMakeFiles/Replication.dir/ReplicationManager.cpp.o"
+  "CMakeFiles/Replication.dir/main.cpp.o"
   "Replication"
   "Replication.pdb"
 )

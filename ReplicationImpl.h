@@ -15,6 +15,6 @@ namespace Replication
 		virtual void RegisterSubscribe(const SubscribeParameters& Parameters) = 0;
 		virtual void UnRegisterSubscribe(const SubscribeParameters& Parameters) = 0;
 
-		virtual void Resume() = 0;
+		virtual void Comsume() = 0;
 	};
 }

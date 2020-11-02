@@ -5,193 +5,186 @@
 		<Option title="Replication"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\hiredis\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\libevent\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\usr\local\share\hiredis\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/junminkim/Workspace/C++/Replication/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/junminkim/Workspace/C++/Replication/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/junminkim/Workspace/C++/Replication/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Replication">
-				<Option output="/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Replication" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/junminkim/Workspace/C++/Replication/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Replication" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Users/junminkim/Workspace/C++/Replication/."/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/mnt/c/Users/junmkim/CLionProjects/Replication/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 Replication"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 Replication"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Replication/fast">
-				<Option output="/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Replication" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/junminkim/Workspace/C++/Replication/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Replication" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Users/junminkim/Workspace/C++/Replication/."/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/mnt/c/Users/junmkim/CLionProjects/Replication/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 Replication/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/junminkim/Workspace/C++/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 Replication/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/Command.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/Command.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/Command.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/Command.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/Common.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/Common.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/ConnectEnviorment.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectEnviorment.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/Connection.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/Connection.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/Connection.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/Connection.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/ConnectionPool.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectionPool.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/MultipleCallbackProperty.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/MultipleCallbackProperty.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/Property.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/Property.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/PublishProperty.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/PublishProperty.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisAuthCommand.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisAuthCommand.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisAuthCommand.hpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisAuthCommand.hpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisCommon.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisCommon.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisConnection.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisConnection.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisConnection.hpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisConnection.hpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisPublishCommand.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisPublishCommand.hpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisPublishCommand.hpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisReplicationImpl.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisReplicationImpl.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisReplicationImpl.hpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisReplicationImpl.hpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisSubscribeCommand.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/RedisSubscribeCommand.hpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/RedisSubscribeCommand.hpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/ReplicationImpl.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationImpl.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/ReplicationManager.cpp">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationManager.cpp">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/ReplicationManager.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationManager.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/Runnable.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/Runnable.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/SharedPool.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/SharedPool.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/SubscribeProperty.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/SubscribeProperty.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/TypeDefine.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/TypeTraits.h">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/TypeTraits.h">
 			<Option target="Replication"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/main.cpp">
+			<Option target="Replication"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/../../../../../usr/local/share/hiredis/hiredis-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\hiredis\"/>
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/../../../../../../usr/local/share/hiredis/hiredis-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\hiredis\"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/../../../../../usr/local/share/hiredis/hiredis-targets-noconfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\hiredis\"/>
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/../../../../../../usr/local/share/hiredis/hiredis-targets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\hiredis\"/>
 		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/../../../../../usr/local/share/hiredis/hiredis-targets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\hiredis\"/>
-		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/../../../../../usr/local/lib/cmake/libevent/LibeventTargets-shared-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libevent\"/>
-		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/../../../../../usr/local/lib/cmake/libevent/LibeventTargets-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libevent\"/>
-		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/../../../../../usr/local/lib/cmake/libevent/libeventConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libevent\"/>
-		</Unit>
-		<Unit filename="/Users/junminkim/Workspace/C++/Replication/../../../../../usr/local/lib/cmake/libevent/libeventConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libevent\"/>
+		<Unit filename="/mnt/c/Users/junmkim/CLionProjects/Replication/../../../../../../usr/local/share/hiredis/hiredis-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\hiredis\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

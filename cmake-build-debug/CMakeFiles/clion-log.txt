@@ -1,11 +1,5 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/junminkim/Workspace/C++/Replication
--- Found libevent include directory: /usr/local/include
--- Found libevent component: /usr/local/lib/libevent_core.dylib
--- Found libevent component: /usr/local/lib/libevent_extra.dylib
--- Found libevent component: /usr/local/lib/libevent_openssl.dylib
--- Found libevent component: /usr/local/lib/libevent_pthreads.dylib
--- Found libevent 2.1.12 in /usr/local
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/junmkim/CLionProjects/Replication
 -- hiredis location : /usr/local/include
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/junminkim/Workspace/C++/Replication/cmake-build-debug
+-- Build files have been written to: /mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug

@@ -25,7 +25,7 @@ namespace Replication
 
                 std::for_each(ParameterMap.begin(), ParameterMap.end(), [&Command](const auto& Iter)
                 {
-                    Command.append(Util::Format(" %s %s ", Iter.second.Channel.c_str(), Iter.second.Value.c_str()));
+                    Command.append(Util::StringHelper::Format(" %s %s ", Iter.second.Channel.c_str(), Iter.second.Value.c_str()));
                 });
 
                 return Command;
@@ -47,7 +47,7 @@ namespace Replication
             }
 
 #if defined(REPLICATION_DEBUG)
-            std::cout << Util::Format("PUBLISH: %s", PublishCommand) << '\n;
+            std::cout << Util::StringHelper::Format("PUBLISH: %s", PublishCommand) << '\n';
 #endif
             return true;
 

@@ -10,6 +10,10 @@ namespace Replication
 		std::string  Channel;
 
         ReplicationParameters() = default;
+        ReplicationParameters(const std::string& ChannelName)
+        :Channel(ChannelName)
+        {
+        }
         ReplicationParameters(const ReplicationParameters& paramters)
         {
 		    Channel = paramters.Channel;

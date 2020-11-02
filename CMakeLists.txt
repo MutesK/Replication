@@ -4,7 +4,6 @@ project(Replication)
 set(CMAKE_CXX_STANDARD 17)
 
 find_package(hiredis REQUIRED)
-find_package(libevent REQUIRED)
 
 include_directories(${hiredis_INCLUDE_DIRS})
 include_directories(.)
@@ -30,7 +29,7 @@ add_executable(Replication
         SharedPool.h
         SubscribeProperty.h
         TypeDefine.h
-        TypeTraits.h RedisConnection.cpp RedisConnection.hpp RedisCommon.h RedisAuthCommand.cpp RedisAuthCommand.hpp RedisPublishCommand.cpp RedisPublishCommand.hpp RedisSubscribeCommand.cpp RedisSubscribeCommand.hpp RedisReplicationImpl.cpp RedisReplicationImpl.hpp)
+        TypeTraits.h RedisConnection.cpp RedisConnection.hpp RedisCommon.h RedisAuthCommand.cpp RedisAuthCommand.hpp RedisPublishCommand.cpp RedisPublishCommand.hpp RedisSubscribeCommand.cpp RedisSubscribeCommand.hpp RedisReplicationImpl.cpp RedisReplicationImpl.hpp main.cpp)
 
 
 target_link_libraries(Replication ${HIREDIS_LIBRARIES})

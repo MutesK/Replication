@@ -10,12 +10,14 @@
 #include <pthread.h>
 #include <signal.h>
 
-void SuspendThread(void* native_handle)
+typedef __gthread_t			native_handle_type;
+
+void SuspendThread(native_handle_type native_handle)
 {
     pthread_kill((pthread_t)native_handle, SIGUSR1);
 }
 
-void ResumeThread(void* native_handle)
+void ResumeThread(native_handle_type native_handle)
 {
     pthread_kill((pthread_t)native_handle, SIGUSR2);
 }

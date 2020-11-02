@@ -44,7 +44,7 @@ namespace Replication
 
             virtual void UnRegisterSubscribe(const SubscribeParameters &Parameters) override;
 
-            virtual void Resume() override;
+            virtual void Comsume() override;
 
         };
 
@@ -62,7 +62,7 @@ namespace Replication
 
             virtual void UnRegisterSubscribe(const SubscribeParameters &Parameters) override;
 
-            virtual void Resume() override;
+            virtual void Comsume() override;
 
         };
     }

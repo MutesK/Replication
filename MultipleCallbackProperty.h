@@ -16,11 +16,11 @@ private:
 public:
 	virtual void Set(const Type& value) override
 	{
-		_type = value;
+        _Type = value;
 	
-		std::for_each(_Delegates.begin(), _Delegates.end(), [&_type](const auto& Delegate)
+		std::for_each(_Delegates.begin(), _Delegates.end(), [&](const auto& Delegate)
 			{
-				Delegate(_type);
+				Delegate(_Type);
 			});
 	}
 

@@ -17,7 +17,7 @@ namespace Replication
 			const ConnectEnviorment& Env)
 		{
 #if defined(REPLICATION_REDIS)
-            auto Ptr = std::shared_ptr<ConnectionPool<::Replication::Redis::RedisConnection>>
+            static auto Ptr = std::shared_ptr<ConnectionPool<::Replication::Redis::RedisConnection>>
             (new ConnectionPool<::Replication::Redis::RedisConnection>(Env));
 
             switch(ModeType)

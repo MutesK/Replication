@@ -48,7 +48,7 @@ namespace Replication
 
                 std::for_each(ParameterMap.begin(), ParameterMap.end(), [&Command](const auto& Iter)
                 {
-                    Command.append(Util::Format(" %s ", Iter.second.Channel.c_str()));
+                    Command.append(Util::StringHelper::Format(" %s ", Iter.second.Channel.c_str()));
                 });
 
                 return Command;
@@ -76,12 +76,12 @@ namespace Replication
                 for(int index = 0; index < pRawReply->elements; ++index)
                 {
 #if defined(REPLICATION_DEBUG)
-                    std::cout << Util::Format("[%d] %s", index, reply->element[i]->str) << '\n';
+                    std::cout << Util::StringHelper::Format("[%d] %s", index, reply->element[i]->str) << '\n';
 #endif
 
                 }
             }
-
+            return true;
         }
 
         std::size_t RedisSubscribeCommand::ParameterSize() const
