@@ -10,8 +10,6 @@
 #if defined(REPLICATION_REDIS)
 
 #include <hiredis/hiredis.h>
-#include <hiredis/async.h>
-#include <hiredis/adapters/libevent.h>
 
 namespace Replication
 {
@@ -24,13 +22,11 @@ namespace Replication
 #if defined(REPLICATION_DEBUG)
 
 #endif
-            }
-
-            static void Throw(redisAsyncContext *pContext, std::string function, size_t Line)
-            {
-#if defined(REPLICATION_DEBUG)
-
-#endif
+                throw std::logic_error(Util::StringHelper::Format("RedisError: Function %s/ Line %d  Because (%d:%s)",
+                                                            function.c_str(),
+                                                            Line,
+                                                            pContext->err,
+                                                            pContext->errstr));
             }
 
             static void Throw(std::string ThrowMessage, std::string Function, std::size_t line)
@@ -38,6 +34,10 @@ namespace Replication
 #if defined(REPLICATION_DEBUG)
 
 #endif
+                throw std::logic_error(Util::StringHelper::Format("RedisError: Function %s/ Line %d Because (%s)",
+                                                            Function.c_str(),
+                                                            line,
+                                                            ThrowMessage.c_str()));
             }
         };
 

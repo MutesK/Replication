@@ -7,7 +7,7 @@ class Property
 protected:
 	Type _type;
 public:
-	Property() = default;
+	explicit Property() = default;
 	~Property() = default;
 
 	virtual void Set(const Type& value)

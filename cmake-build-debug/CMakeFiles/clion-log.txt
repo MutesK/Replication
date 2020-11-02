@@ -1,5 +1,4 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/junmkim/CLionProjects/Replication
--- hiredis location : /usr/local/include
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug

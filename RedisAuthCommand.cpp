@@ -46,6 +46,12 @@ namespace Replication
 #if defined(REPLICATION_DEBUG)
             std::cout << Util::StringHelper::Format("AUTH %s", Reply->str) << '\n';
 #endif
+
+            if(Reply->type == REDIS_REPLY_ERROR)
+            {
+                RedisError::Throw("Redis Auth Failed", __FUNCTION__, __LINE__);
+                return false;
+            }
             return true;
         }
     }

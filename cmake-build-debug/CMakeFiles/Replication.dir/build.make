@@ -199,6 +199,7 @@ Replication: CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o
 Replication: CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.o
 Replication: CMakeFiles/Replication.dir/main.cpp.o
 Replication: CMakeFiles/Replication.dir/build.make
+Replication: /usr/local/lib/libhiredis.so.1.0.1-dev
 Replication: CMakeFiles/Replication.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/junmkim/CLionProjects/Replication/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Replication"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Replication.dir/link.txt --verbose=$(VERBOSE)

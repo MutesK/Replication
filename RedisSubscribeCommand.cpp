@@ -54,6 +54,18 @@ namespace Replication
                 return Command;
             };
 
+            static auto CallbackProcess = [&](const std::string& Channel, const std::string& Value)
+            {
+                const auto& Iter = _ParameterMap.find(Channel);
+                if(Iter == _ParameterMap.end())
+                {
+                    return;
+                }
+
+                const auto& Parameter = Iter->second;
+                Parameter.UpdateCallback(Value);
+            };
+
             auto Context = std::static_pointer_cast<RedisConnection>(_ConnectionPtr)->GetRedisContext();
             std::string SubscribeCommand = CreateSubscribeCommand(_ParameterMap);
 
@@ -73,13 +85,21 @@ namespace Replication
             redisReply* pRawReply = nullptr;
             while(redisGetReply(Context, (void **)(&pRawReply)) == REDIS_OK)
             {
+                if(pRawReply->type != REDIS_REPLY_ARRAY)
+                    continue;
+
+#if defined(REPLICATION_DEBUG)
                 for(int index = 0; index < pRawReply->elements; ++index)
                 {
-#if defined(REPLICATION_DEBUG)
-                    std::cout << Util::StringHelper::Format("[%d] %s", index, reply->element[i]->str) << '\n';
-#endif
-
+                    std::cout << Util::StringHelper::Format("[%d]: %s", index, reply->element[i]->str) << '\n';
                 }
+#endif
+                const std::string ChannelName = pRawReply->element[1]->str;
+                const std::string Value = pRawReply->element[2]->str;
+
+                CallbackProcess(ChannelName, Value);
+
+                freeReplyObject(pRawReply);
             }
             return true;
         }

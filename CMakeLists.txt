@@ -8,9 +8,6 @@ find_package(hiredis REQUIRED)
 include_directories(${hiredis_INCLUDE_DIRS})
 include_directories(.)
 
-message(STATUS "hiredis location : ${hiredis_INCLUDE_DIRS}")
-
-
 add_executable(Replication
         Command.cpp
         Command.h
@@ -32,4 +29,7 @@ add_executable(Replication
         TypeTraits.h RedisConnection.cpp RedisConnection.hpp RedisCommon.h RedisAuthCommand.cpp RedisAuthCommand.hpp RedisPublishCommand.cpp RedisPublishCommand.hpp RedisSubscribeCommand.cpp RedisSubscribeCommand.hpp RedisReplicationImpl.cpp RedisReplicationImpl.hpp main.cpp)
 
 
-target_link_libraries(Replication ${HIREDIS_LIBRARIES})
+target_link_libraries(Replication ${hiredis_LIBRARIES})
+
+
+add_compile_options("-lhiredis")

@@ -33,10 +33,8 @@ namespace Replication
             }
             else if(_pRawContext->err)
             {
-                redisFree(_pRawContext);
-                Code = _pRawContext->err;
-
                 RedisError::Throw(_pRawContext, __FUNCTION__, __LINE__);
+                redisFree(_pRawContext);
                 return false;
             }
 
@@ -61,6 +59,11 @@ namespace Replication
 
             redisFree(_pRawContext);
             return true;
+        }
+
+        redisContext *RedisConnection::GetRedisContext()
+        {
+            return _pRawContext;
         }
     }
 }

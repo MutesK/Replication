@@ -2,8 +2,6 @@
 #include "TypeDefine.h"
 #include "ConnectEnviorment.h"
 #include "ReplicationManager.h"
-#include "ReplicationImpl.h"
-
 #include "ConnectionPool.h"
 #include "RedisConnection.hpp"
 #include "RedisReplicationImpl.hpp"
@@ -48,4 +46,12 @@ namespace Replication
 
 		return true;
 	}
+
+    void ReplicationManager::Comsume()
+    {
+        if(nullptr == _ReplicationImplPtr)
+            return;
+
+        _ReplicationImplPtr->Comsume();
+    }
 }

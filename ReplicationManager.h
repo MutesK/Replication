@@ -3,13 +3,10 @@
 #include "ConnectEnviorment.h"
 #include "PublishProperty.h"
 #include "SubscribeProperty.h"
+#include "ReplicationImpl.h"
 
 namespace Replication
 {
-	struct PublishParameters;
-	struct SubscribeParameters;
-
-	class IReplicationImpl;
 	using ReplicationImplPtr = std::shared_ptr<IReplicationImpl>;
 
 	class ReplicationManager final
@@ -52,13 +49,4 @@ namespace Replication
 
         return Property;
 	}
-
-    void ReplicationManager::Comsume()
-    {
-        if(nullptr == _ReplicationImplPtr)
-            return;
-
-        _ReplicationImplPtr->Comsume();
-    }
-
 }

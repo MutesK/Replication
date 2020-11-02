@@ -27,6 +27,11 @@ namespace Replication
         {
 		    _ReplicatorPtr->UnRequestPublishOnce(_Parameters);
         }
+
+        void operator=(Type value)
+        {
+            this->Set(value);
+        }
 	protected:
 		virtual void OnChangedProperty() override
 		{

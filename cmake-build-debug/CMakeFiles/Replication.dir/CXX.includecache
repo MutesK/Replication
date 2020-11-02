@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/junmkim/CLionProjects/Replication/Command.h
-
 /mnt/c/Users/junmkim/CLionProjects/Replication/Common.h
 functional
 -
@@ -40,26 +38,6 @@ stdarg.h
 string
 -
 
-/mnt/c/Users/junmkim/CLionProjects/Replication/Connection.h
-TypeDefine.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
-ConnectEnviorment.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectEnviorment.h
-
-/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectionPool.h
-TypeDefine.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
-Common.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/Common.h
-SharedPool.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/SharedPool.h
-Connection.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/Connection.h
-ConnectEnviorment.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectEnviorment.h
-ConnectionPool.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectionPool.h
-
 /mnt/c/Users/junmkim/CLionProjects/Replication/Property.h
 
 /mnt/c/Users/junmkim/CLionProjects/Replication/PublishProperty.h
@@ -74,49 +52,9 @@ ReplicationImpl.h
 sstream
 -
 
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisConnection.hpp
-Connection.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/Connection.h
-
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisPublishCommand.hpp
-Command.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/Command.h
-
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisReplicationImpl.hpp
-ReplicationImpl.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationImpl.h
-ConnectionPool.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectionPool.h
-RedisPublishCommand.hpp
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisPublishCommand.hpp
-RedisSubscribeCommand.hpp
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisSubscribeCommand.hpp
-
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisSubscribeCommand.hpp
-Command.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/Command.h
-
 /mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationImpl.h
 TypeDefine.h
 /mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
-
-/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationManager.cpp
-Common.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/Common.h
-TypeDefine.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
-ConnectEnviorment.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectEnviorment.h
-ReplicationManager.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationManager.h
-ReplicationImpl.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationImpl.h
-ConnectionPool.h
-/mnt/c/Users/junmkim/CLionProjects/Replication/ConnectionPool.h
-RedisConnection.hpp
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisConnection.hpp
-RedisReplicationImpl.hpp
-/mnt/c/Users/junmkim/CLionProjects/Replication/RedisReplicationImpl.hpp
 
 /mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationManager.h
 ConnectEnviorment.h
@@ -125,14 +63,8 @@ PublishProperty.h
 /mnt/c/Users/junmkim/CLionProjects/Replication/PublishProperty.h
 SubscribeProperty.h
 /mnt/c/Users/junmkim/CLionProjects/Replication/SubscribeProperty.h
-
-/mnt/c/Users/junmkim/CLionProjects/Replication/SharedPool.h
-cassert
--
-vector
--
-memory
--
+ReplicationImpl.h
+/mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationImpl.h
 
 /mnt/c/Users/junmkim/CLionProjects/Replication/SubscribeProperty.h
 Common.h

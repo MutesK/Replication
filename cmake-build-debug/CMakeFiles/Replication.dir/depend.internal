@@ -24,13 +24,7 @@ CMakeFiles/Replication.dir/RedisAuthCommand.cpp.o
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisCommon.h
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisConnection.hpp
  /mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/util.h
- /usr/local/include/event2/visibility.h
- /usr/local/include/hiredis/adapters/libevent.h
  /usr/local/include/hiredis/alloc.h
- /usr/local/include/hiredis/async.h
  /usr/local/include/hiredis/hiredis.h
  /usr/local/include/hiredis/read.h
  /usr/local/include/hiredis/sds.h
@@ -44,13 +38,7 @@ CMakeFiles/Replication.dir/RedisConnection.cpp.o
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisConnection.cpp
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisConnection.hpp
  /mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/util.h
- /usr/local/include/event2/visibility.h
- /usr/local/include/hiredis/adapters/libevent.h
  /usr/local/include/hiredis/alloc.h
- /usr/local/include/hiredis/async.h
  /usr/local/include/hiredis/hiredis.h
  /usr/local/include/hiredis/read.h
  /usr/local/include/hiredis/sds.h
@@ -64,13 +52,7 @@ CMakeFiles/Replication.dir/RedisPublishCommand.cpp.o
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisPublishCommand.cpp
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisPublishCommand.hpp
  /mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/util.h
- /usr/local/include/event2/visibility.h
- /usr/local/include/hiredis/adapters/libevent.h
  /usr/local/include/hiredis/alloc.h
- /usr/local/include/hiredis/async.h
  /usr/local/include/hiredis/hiredis.h
  /usr/local/include/hiredis/read.h
  /usr/local/include/hiredis/sds.h
@@ -89,13 +71,7 @@ CMakeFiles/Replication.dir/RedisReplicationImpl.cpp.o
  /mnt/c/Users/junmkim/CLionProjects/Replication/ReplicationImpl.h
  /mnt/c/Users/junmkim/CLionProjects/Replication/SharedPool.h
  /mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/util.h
- /usr/local/include/event2/visibility.h
- /usr/local/include/hiredis/adapters/libevent.h
  /usr/local/include/hiredis/alloc.h
- /usr/local/include/hiredis/async.h
  /usr/local/include/hiredis/hiredis.h
  /usr/local/include/hiredis/read.h
  /usr/local/include/hiredis/sds.h
@@ -109,13 +85,7 @@ CMakeFiles/Replication.dir/RedisSubscribeCommand.cpp.o
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisSubscribeCommand.cpp
  /mnt/c/Users/junmkim/CLionProjects/Replication/RedisSubscribeCommand.hpp
  /mnt/c/Users/junmkim/CLionProjects/Replication/TypeDefine.h
- /usr/local/include/event2/event-config.h
- /usr/local/include/event2/event.h
- /usr/local/include/event2/util.h
- /usr/local/include/event2/visibility.h
- /usr/local/include/hiredis/adapters/libevent.h
  /usr/local/include/hiredis/alloc.h
- /usr/local/include/hiredis/async.h
  /usr/local/include/hiredis/hiredis.h
  /usr/local/include/hiredis/read.h
  /usr/local/include/hiredis/sds.h

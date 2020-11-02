@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include -I/mnt/c/Users/junmkim/CLionProjects/Replication/. 
+CXX_INCLUDES = -I/mnt/c/Users/junmkim/CLionProjects/Replication/. -isystem /usr/local/include 
 
