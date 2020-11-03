@@ -20,6 +20,7 @@
 #include <stdexcept>
 #include <unordered_map>
 #include <stdarg.h>
+#include <iostream>
 
 namespace Util
 {

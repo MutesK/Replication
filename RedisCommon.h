@@ -15,31 +15,7 @@ namespace Replication
 {
     namespace Redis
     {
-        struct RedisError
-        {
-            static void Throw(redisContext *pContext, std::string function, size_t Line)
-            {
-#if defined(REPLICATION_DEBUG)
-
-#endif
-                throw std::logic_error(Util::StringHelper::Format("RedisError: Function %s/ Line %d  Because (%d:%s)",
-                                                            function.c_str(),
-                                                            Line,
-                                                            pContext->err,
-                                                            pContext->errstr));
-            }
-
-            static void Throw(std::string ThrowMessage, std::string Function, std::size_t line)
-            {
-#if defined(REPLICATION_DEBUG)
-
-#endif
-                throw std::logic_error(Util::StringHelper::Format("RedisError: Function %s/ Line %d Because (%s)",
-                                                            Function.c_str(),
-                                                            line,
-                                                            ThrowMessage.c_str()));
-            }
-        };
+        const std::string BlankCommand = " ";
 
         class ScopedRedisReply
         {
@@ -47,7 +23,7 @@ namespace Replication
 
         public:
             ScopedRedisReply(redisReply* Reply)
-            :_pRawReply(Reply)
+                    :_pRawReply(Reply)
             {
             }
 
@@ -66,6 +42,46 @@ namespace Replication
                 return _pRawReply;
             }
         };
+        struct RedisError
+        {
+            static void Throw(redisContext *pContext, std::string file, std::string function, size_t Line)
+            {
+#if defined(REPLICATION_DEBUG)
+
+#endif
+                throw std::logic_error(Util::StringHelper::Format("RedisError: %s Function %s/ Line %d  Because (%d:%s)",
+                                                            file.c_str(),
+                                                            function.c_str(),
+                                                            Line,
+                                                            pContext->err,
+                                                            pContext->errstr));
+            }
+
+            static void Throw(ScopedRedisReply& Reply, std::string file, std::string function, size_t Line)
+            {
+#if defined(REPLICATION_DEBUG)
+
+#endif
+                throw std::logic_error(Util::StringHelper::Format("RedisError: %s Function %s/ Line %d  Because (%s)",
+                                                                  file.c_str(),
+                                                                  function.c_str(),
+                                                                  Line,
+                                                                  Reply->str));
+            }
+
+            static void Throw(std::string ThrowMessage, std::string file, std::string Function, std::size_t line)
+            {
+#if defined(REPLICATION_DEBUG)
+
+#endif
+                throw std::logic_error(Util::StringHelper::Format("RedisError: %s Function %s/ Line %d Because (%s)",
+                                                                  file.c_str(),
+                                                                  Function.c_str(),
+                                                            line,
+                                                            ThrowMessage.c_str()));
+            }
+        };
+
 
     }
 }

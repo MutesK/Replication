@@ -25,21 +25,21 @@ namespace Replication
             const auto& Ptr = std::static_pointer_cast<RedisConnection>(_ConnectionPtr);
             if(nullptr == Ptr)
             {
-                RedisError::Throw("Connection Pointer is Null", __FUNCTION__, __LINE__);
+                RedisError::Throw("Connection Pointer is Null", __FILE__, __FUNCTION__, __LINE__);
                 return false;
             }
 
             auto Context = Ptr->GetRedisContext();
             if(nullptr == Context)
             {
-                RedisError::Throw("RedisContext Pointer is Null Get From Connection", __FUNCTION__, __LINE__);
+                RedisError::Throw("RedisContext Pointer is Null Get From Connection", __FILE__,  __FUNCTION__, __LINE__);
                 return false;
             }
 
             ScopedRedisReply Reply = (redisReply *)redisCommand(Context, "AUTH %s", _Pass.c_str());
             if(nullptr == Reply.get())
             {
-                RedisError::Throw("RedisReply is Null From redisCommand", __FUNCTION__, __LINE__);
+                RedisError::Throw("RedisReply is Null From redisCommand",  __FILE__, __FUNCTION__, __LINE__);
                 return false;
             }
 
@@ -49,7 +49,7 @@ namespace Replication
 
             if(Reply->type == REDIS_REPLY_ERROR)
             {
-                RedisError::Throw("Redis Auth Failed", __FUNCTION__, __LINE__);
+                RedisError::Throw("Redis Auth Failed",  __FILE__, __FUNCTION__, __LINE__);
                 return false;
             }
             return true;

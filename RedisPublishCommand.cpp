@@ -19,38 +19,21 @@ namespace Replication
 
         bool RedisPublishCommand::Do(ErrorCode &Code)
         {
-            static auto CreatePublishCommand = [](const ChannelPerPublishParameterMap& ParameterMap) -> std::string
-            {
-                std::string Command;
-
-                std::for_each(ParameterMap.begin(), ParameterMap.end(), [&Command](const auto& Iter)
-                {
-                    Command.append(Util::StringHelper::Format("%s %s ", Iter.second.Channel.c_str(), Iter.second.Value.c_str()));
-                });
-
-                return Command;
-            };
-
             auto Context = std::static_pointer_cast<RedisConnection>(_ConnectionPtr)->GetRedisContext();
-            std::string PublishCommand = CreatePublishCommand(_ParameterMap);
-
-            ScopedRedisReply Reply = (redisReply *)redisCommand(Context, "PUBLISH %s", PublishCommand.c_str());
-            if(nullptr == Reply.get())
+            std::for_each(_ParameterMap.begin(), _ParameterMap.end(), [&Context](const auto& Iter)
             {
-                return false;
-            }
+                redisAppendCommand(Context, "PUBLISH %s %s", Iter.second.Channel.c_str(), Iter.second.Value.c_str());
+            });
 
-            if(Reply->type == REDIS_REPLY_ERROR)
+            std::for_each(_ParameterMap.begin(), _ParameterMap.end(), [&Context](const auto& Iter)
             {
-                RedisError::Throw(Context, __FUNCTION__, __LINE__);
-                return false;
-            }
+                ScopedRedisReply Reply = nullptr;
+                redisGetReply(Context, (void **)(&Reply));
 
-#if defined(REPLICATION_DEBUG)
-            std::cout << Util::StringHelper::Format("PUBLISH: %s", PublishCommand) << '\n';
-#endif
+                // Debug if type reply_integer then print recvied client num.
+            });
+
             return true;
-
         }
 
         void RedisPublishCommand::PushParameter(const PublishParameters &Parameter)

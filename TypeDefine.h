@@ -2,6 +2,8 @@
 
 #include "Common.h"
 
+#define REPLICATION_DEBUG
+
 namespace Replication
 {
 	using ErrorCode = uint64_t;

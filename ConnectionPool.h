@@ -29,7 +29,7 @@ namespace Replication
 		    ErrorCode Code;
 			auto Connection = std::make_shared<DerivedConnectionType>(Env);
 
-			if (Connection->Connect(Code))
+			if (false == Connection->Connect(Code))
 			{
 				--Count;
 				continue;

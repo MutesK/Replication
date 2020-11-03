@@ -33,7 +33,7 @@ namespace Replication
             }
             else if(_pRawContext->err)
             {
-                RedisError::Throw(_pRawContext, __FUNCTION__, __LINE__);
+                RedisError::Throw(_pRawContext, __FILE__, __FUNCTION__, __LINE__);
                 redisFree(_pRawContext);
                 return false;
             }

@@ -19,7 +19,7 @@ namespace Replication
             auto Context = std::static_pointer_cast<RedisConnection>(_ConnectionPtr)->GetRedisContext();
             if(redisSetTimeout(Context, Timeout) == REDIS_OK)
             {
-                RedisError::Throw(Context, __FUNCTION__, __LINE__);
+                RedisError::Throw(Context, __FILE__, __FUNCTION__, __LINE__);
             }
         }
 
@@ -42,65 +42,35 @@ namespace Replication
 
         bool RedisSubscribeCommand::Do(ErrorCode &Code)
         {
-            static auto CreateSubscribeCommand = [](const ChannelPerSubscribeParameterMap& ParameterMap) -> std::string
-            {
-                std::string Command;
-
-                std::for_each(ParameterMap.begin(), ParameterMap.end(), [&Command](const auto& Iter)
-                {
-                    Command.append(Util::StringHelper::Format(" %s ", Iter.second.Channel.c_str()));
-                });
-
-                return Command;
-            };
-
-            static auto CallbackProcess = [&](const std::string& Channel, const std::string& Value)
-            {
-                const auto& Iter = _ParameterMap.find(Channel);
-                if(Iter == _ParameterMap.end())
-                {
-                    return;
-                }
-
-                const auto& Parameter = Iter->second;
-                Parameter.UpdateCallback(Value);
-            };
-
             auto Context = std::static_pointer_cast<RedisConnection>(_ConnectionPtr)->GetRedisContext();
-            std::string SubscribeCommand = CreateSubscribeCommand(_ParameterMap);
-
+            std::for_each(_ParameterMap.begin(), _ParameterMap.end(), [&Context](const auto& Iter)
             {
-                ScopedRedisReply Reply = (redisReply *) redisCommand(Context, "SUBSCRIBE %s", SubscribeCommand.c_str());
-                if (nullptr == Reply.get())
+                redisAppendCommand(Context, "SUBSCRIBE %s", Iter.second.Channel);
+            });
+
+            std::for_each(_ParameterMap.begin(), _ParameterMap.end(), [&Context](const auto& Iter)
+            {
+                ScopedRedisReply Reply = nullptr;
+                redisGetReply(Context, (void **)(&Reply));
+
+                if(nullptr == Reply.get())
                 {
-                    return false;
+                    RedisError::Throw("redisGetReply returns nullptr", __FILE__, __FUNCTION__, __LINE__);
                 }
 
-                if (REDIS_REPLY_ERROR == Reply->type)
-                {
-                    return false;
-                }
-            }
-
-            redisReply* pRawReply = nullptr;
-            while(redisGetReply(Context, (void **)(&pRawReply)) == REDIS_OK)
-            {
-                if(pRawReply->type != REDIS_REPLY_ARRAY)
-                    continue;
+                if(Reply->type != REDIS_REPLY_ARRAY)
+                    return;
 
 #if defined(REPLICATION_DEBUG)
-                for(int index = 0; index < pRawReply->elements; ++index)
+                for(int index = 0; index < Reply->elements; ++index)
                 {
-                    std::cout << Util::StringHelper::Format("[%d]: %s", index, reply->element[i]->str) << '\n';
+                    std::cout << Util::StringHelper::Format("[%d]: %s", index, Reply->element[index]->str) << '\n';
                 }
 #endif
-                const std::string ChannelName = pRawReply->element[1]->str;
-                const std::string Value = pRawReply->element[2]->str;
+                Iter.second.UpdateValue(Reply->element[1]->str, Reply->element[2]->str);
+            });
 
-                CallbackProcess(ChannelName, Value);
 
-                freeReplyObject(pRawReply);
-            }
             return true;
         }
 
